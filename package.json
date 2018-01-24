@@ -1,0 +1,11 @@
+{
+  "name": "slacki",
+  "version": "1.0.0",
+  "description": "You will be. You will be.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Billy Montgomery",
+  "license": "MIT"
+}
