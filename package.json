@@ -8,9 +8,18 @@
   },
   "main": "lib/index.js",
   "scripts": {
-    "test": "test"
+    "clean": "rimraf lib",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:examples": "node examples/",
+    "cover": "cross-env BABEL_ENV=commonjs istanbul cover _mocha -- --compilers js:babel-register --recursive",
+    "lint": "eslint src",
+    "lint:fix": "npm run lint -- --fix",
+    "build": "cross-env BABEL_ENV=commonjs babel src --out-dir bin --source-maps",
+    "flow": "flow",
+    "prepublish": "npm run clean && npm run build && npm run test"
   },
-  "author": "Billy Montgomery",
+  "author": "Billy Montgomery billy.montgomery@gmail.com",
   "license": "MIT",
   "directories": {
     "example": "examples",
@@ -29,19 +38,6 @@
     "cli",
     "node"
   ],
-  "author": "Billy Montgomery billy.montgomery@gmail.com",
-  "scripts": {
-    "clean": "rimraf lib",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:examples": "node examples/",
-    "cover": "cross-env BABEL_ENV=commonjs istanbul cover _mocha -- --compilers js:babel-register --recursive",
-    "lint": "eslint src",
-    "lint:fix": "npm run lint -- --fix",
-    "build": "cross-env BABEL_ENV=commonjs babel src --out-dir bin --source-maps",
-    "flow": "flow",
-    "prepublish": "npm run clean && npm run build && npm run test"
-  },
   "dependencies": {
     "axios": "^0.16.2",
     "babel-runtime": "^6.23.0",
