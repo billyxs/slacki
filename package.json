@@ -2,7 +2,7 @@
   "name": "slacki",
   "version": "1.0.1",
   "description": "You will be. You will be.",
-  repository": {
+  "repository": {
     "type": "git",
     "url": "git+https://github.com/billyxs/slacki.git"
   },
@@ -17,8 +17,8 @@
     "test": "test"
   },
   "bin": {
-    "hi": "bin/index.js",
-    "hiflow": "bin/index.js"
+    "sli": "bin/index.js",
+    "slacki": "bin/index.js"
   },
   "files": [
     "src",
