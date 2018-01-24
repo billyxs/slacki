@@ -1,6 +1,6 @@
 {
   "name": "slacki",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "You will be. You will be.",
   "main": "lib/index.js",
   "scripts": {
