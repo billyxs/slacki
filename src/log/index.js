@@ -14,9 +14,13 @@ export function logPresence({
   presence,
   online,
 }) {
-  console.log(`presence: ${presence === 'active' ?
-    chalk.green(presence) :
-    chalk.gray(presence)} / ${(online ? chalk.green('online') : chalk.red('offline'))}
+  console.log(`presence: ${
+    presence === 'active' ?
+      chalk.green(presence) :
+      chalk.white(presence)} / ${(
+    online ?
+      chalk.green('online') :
+      chalk.red('offline'))}
 `)
 }
 
