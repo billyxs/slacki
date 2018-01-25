@@ -3,7 +3,7 @@ import { saveToken } from '../settings'
 
 export default async function configPrompt() {
   try {
-    const { token } = await inquirer({
+    const { token } = await inquirer.prompt({
       type: 'input',
       name: 'token',
       message: 'What\'s your slack token?',

@@ -32,8 +32,7 @@ export function parseConfig(settings = '') {
   }, {})
 }
 
-
-export default function dotJson(filename, path = HOME) {
+export default function dotJson({ filename, path = HOME } = {}) {
   const CONFIG_FILE_PATH = `${path}/.${filename}`
 
   function getConfigFile() {
@@ -54,7 +53,10 @@ export default function dotJson(filename, path = HOME) {
 
   function save(data) {
     try {
-      return writeConfigFile(formatConfigForSave(data)) || {}
+      return writeConfigFile(
+        CONFIG_FILE_PATH,
+        formatConfigForSave(data),
+      ) || {}
     } catch (e) {
       return {}
     }

@@ -2,9 +2,10 @@
 // import chalk from 'chalk'
 import presenceCommand from './presence'
 import configCommand from './config-cmd'
+import { command } from './args'
+
 console.log('configCommand = ', configCommand)
 
-import { command } from './args'
 
 switch (command) {
   case 'presence': {
@@ -13,6 +14,7 @@ switch (command) {
   }
   case 'setup': {
     configCommand()
+      .catch(console.log)
     break
   }
   default:
