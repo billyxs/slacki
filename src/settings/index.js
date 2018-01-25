@@ -7,5 +7,5 @@ export function getToken() {
 }
 
 export function saveToken(token) {
-  settingsFile.save({ token })
+  return settingsFile.save({ TOKEN: token })
 }

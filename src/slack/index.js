@@ -1,7 +1,8 @@
 import slackAPI from '../slack-api'
+import { getToken } from '../settings'
 
-const token = process.env.TOKEN
+console.log('getToken = ', getToken())
 
 export default slackAPI({
-  token,
+  token: getToken(),
 })
