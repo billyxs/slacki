@@ -32,4 +32,3 @@ export const action = compact([
   stringifyQS(query),
 ]).join('?')
 
-export const HOME = require('os').homedir()
