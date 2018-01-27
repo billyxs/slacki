@@ -2,11 +2,11 @@
 // import chalk from 'chalk'
 import presenceCommand from './presence'
 import configCommand from './config-cmd'
-import { command } from './args'
+import { command, action } from './args'
 
 switch (command) {
   case 'presence': {
-    presenceCommand()
+    presenceCommand(action)
     break
   }
   case 'setup': {

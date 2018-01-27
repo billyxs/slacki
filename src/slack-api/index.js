@@ -34,9 +34,24 @@ export default function slackAPI({ token, host = 'slack.com' } = {}, httpClient 
     return request({ url: `${BASE_URL}/users.getPresence?token=${token}&pretty=1` })
   }
 
+  function setUsersPresence(presence) {
+    return request({ url: `${BASE_URL}/users.setPresence?token=${token}&presence=${presence}&pretty=1` })
+  }
+
+  function setUsersPresenceAway() {
+    return setUsersPresence('away')
+  }
+
+  function setUsersPresenceAuto() {
+    return setUsersPresence('auto')
+  }
+
   return {
     request,
     getUsersList,
     getUsersPresence,
+    setUsersPresence,
+    setUsersPresenceAway,
+    setUsersPresenceAuto,
   }
 }
